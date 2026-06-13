@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(135deg, #40699b, #2c4071, #0f1c3f);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    background-color: rgba(65, 136, 165, 0.3);
+    color: rgb(33, 33, 33);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0;
+    font-size: 16pt;
+    z-index: 100;
+
+}
+
+header h2{
+    padding: 15px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex; 
+
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    padding: 15px;
+    font-size: 16pt;
+}
+
+header li{
+    border: 1px solid black;
+    background-color: #99d0da;
+    border-radius: 5px;
+    font-size: 14pt;
+    padding: 2px 10px;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+header li:hover{
+    background-color: #54909b;
+    font-weight: bold;
+    color: white;
+}
+
+main{
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div{
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    overflow: auto;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    padding: 60px 50px;
+    margin:20px;
+}
+
+main div h1{
+    font-size: 24pt;
+    margin-bottom: 20px;
+    color: #aef0fa;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+main div strong{
+    color: #99d0da;
+    display: inline-block;
+    font-size: 18pt;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+main div section{
+    margin-bottom: 40px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+main div p{
+    font-size: 14pt;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+footer{
+    background-color: rgba(135, 206, 235, 0.4);
+    backdrop-filter: blur(5px);
+    color: black;
+    text-align: right;
+    position: sticky;
+    bottom: 0;
+    padding: 10px 20px;
+}
+main div{
+    margin-top: 20px;
+    padding: 60px 40px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 25px;
+}
+th,td{
+    padding: 10px;
+    border-bottom: 1px solid #99d0da;
+}
+
+.green {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.orange {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.red {
+    color: #e74c3c;
+    font-weight: bold;
+}
+/* --- STYLE DLA STRONY KONTAKTU --- */
+
+/* Główny układ flex */
+.kontakt-kontener {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Wymuszenie border-box dla wszystkich elementów wewnątrz kontaktu */
+.kontakt-kontener, 
+.kontakt-kontener *,
+main div {
+    box-sizing: border-box;
+}
+
+/* Kafelki z danymi i formularzem (wykorzystujemy Twoją klasę .sortowanie) */
+.kontakt-kontener .sortowanie {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* Specyficzna szerokość dla bloku z formularzem */
+.kontakt-kontener .sortowanie:last-child {
+    min-width: 350px;
+}
+
+/* Nagłówki h2 w kafelkach */
+.kontakt-kontener h2 {
+    margin-top: 0;
+    color: gray;
+}
+
+/* Struktura Moich Danych */
+.kontakt-dane-item {
+    margin-bottom: 20px;
+}
+.kontakt-dane-item strong {
+    display: block;
+    font-size: 10pt;
+    color: #aaa;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.kontakt-dane-item span {
+    font-size: 14pt;
+    color: gray;
+}
+
+/* Elementy formularza */
+.kontakt-kontener form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.kontakt-kontener form div {
+    width: 100%;
+}
+.kontakt-kontener form label {
+    display: block;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.kontakt-kontener form input,
+.kontakt-kontener form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+.kontakt-kontener form textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.kontakt-kontener form button {
+    width: 100%;
+    padding: 12px;
+    background-image: linear-gradient(135deg, #40699b, #2c4071, #0f1c3f);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11pt;
+}
