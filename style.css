@@ -144,9 +144,7 @@ th,td{
     color: #e74c3c;
     font-weight: bold;
 }
-/* --- STYLE DLA STRONY KONTAKTU --- */
 
-/* Główny układ flex */
 .kontakt-kontener {
     display: flex;
     flex-wrap: wrap;
@@ -154,14 +152,12 @@ th,td{
     margin-top: 30px;
 }
 
-/* Wymuszenie border-box dla wszystkich elementów wewnątrz kontaktu */
 .kontakt-kontener, 
 .kontakt-kontener *,
 main div {
     box-sizing: border-box;
 }
 
-/* Kafelki z danymi i formularzem (wykorzystujemy Twoją klasę .sortowanie) */
 .kontakt-kontener .sortowanie {
     flex: 1;
     min-width: 300px;
@@ -169,18 +165,15 @@ main div {
     overflow: hidden;
 }
 
-/* Specyficzna szerokość dla bloku z formularzem */
 .kontakt-kontener .sortowanie:last-child {
     min-width: 350px;
 }
 
-/* Nagłówki h2 w kafelkach */
 .kontakt-kontener h2 {
     margin-top: 0;
     color: gray;
 }
 
-/* Struktura Moich Danych */
 .kontakt-dane-item {
     margin-bottom: 20px;
 }
@@ -196,7 +189,6 @@ main div {
     color: gray;
 }
 
-/* Elementy formularza */
 .kontakt-kontener form {
     display: flex;
     flex-direction: column;
@@ -236,4 +228,47 @@ main div {
     cursor: pointer;
     font-weight: bold;
     font-size: 11pt;
+}
+
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    header h2 {
+        padding: 5px;
+        font-size: 18pt;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    header li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header a {
+        display: block;
+        padding: 10px;
+        font-size: 14pt;
+    }
+
+    main div {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
